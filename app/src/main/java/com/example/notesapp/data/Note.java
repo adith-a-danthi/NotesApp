@@ -29,6 +29,8 @@ public class Note {
         this.mNoteContent = noteContent;
     }
 
+
+
     public String getLabel(){
         return this.mNoteLabel;
     }
