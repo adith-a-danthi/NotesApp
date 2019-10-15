@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
+import androidx.paging.DataSource;
+import androidx.paging.PagedList;
 
 import com.example.notesapp.data.Note;
 import com.example.notesapp.database.NotesDao;
@@ -21,6 +23,11 @@ public class NotesRepository {
         notesDao = notesDB.notesDao();
         mAllNotes = notesDao.getAllNotes();
     }
+
+    public DataSource.Factory<Integer,Note> getAllPagedNotes(){
+        return notesDao.getAllPagedNotes();
+    }
+
 
     public LiveData<List<Note>> getAllNotes(){
         return mAllNotes;

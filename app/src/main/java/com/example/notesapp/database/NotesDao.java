@@ -1,6 +1,7 @@
 package com.example.notesapp.database;
 
 import androidx.lifecycle.LiveData;
+import androidx.paging.DataSource;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -17,8 +18,13 @@ public interface NotesDao {
     @Insert
     void addNote(Note note);
 
+    //Live Data
     @Query("SELECT * FROM notes ORDER BY mNoteId ASC")
     LiveData<List<Note>> getAllNotes();
+
+    //Paging Library
+    @Query("SELECT * FROM notes ORDER BY mNoteId ASC")
+    DataSource.Factory<Integer,Note> getAllPagedNotes();
 
     @Delete
     void deleteNote(Note note);

@@ -29,8 +29,6 @@ public class Note {
         this.mNoteContent = noteContent;
     }
 
-
-
     public String getLabel(){
         return this.mNoteLabel;
     }
@@ -41,6 +39,10 @@ public class Note {
 
     public int getNoteId(){
         return this.mNoteId;
+    }
+
+    public boolean equals(Note note){
+        return (mNoteLabel == note.getLabel() && mNoteContent == note.getContent());
     }
 
 }
