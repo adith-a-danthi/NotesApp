@@ -13,8 +13,6 @@ import com.example.notesapp.R;
 import com.example.notesapp.data.Note;
 import com.example.notesapp.holders.NotesViewHolder;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class NotesAdapter extends PagedListAdapter<Note,NotesViewHolder> {
 

@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 import androidx.paging.DataSource;
-import androidx.paging.PagedList;
 
 import com.example.notesapp.data.Note;
 import com.example.notesapp.database.NotesDao;
